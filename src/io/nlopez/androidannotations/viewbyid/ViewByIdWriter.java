@@ -82,11 +82,11 @@ public class ViewByIdWriter extends WriteCommandAction.Simple {
 			} else {
 				injection.append("@org.androidannotations.annotations.ViewById"); // annotation
 			}
-			if (!element.isAndroidAnnotationsCompliantName()) {
-				injection.append("(");
-				injection.append(element.getFullID());
-				injection.append(")");
-			}
+			
+			injection.append("(");
+			injection.append(element.getFullID());
+			injection.append(")");
+	
 			injection.append(" ");
 			if (element.nameFull != null && element.nameFull.length() > 0) { // custom package+class
 				injection.append(element.nameFull);
